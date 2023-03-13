@@ -1,0 +1,28 @@
+package com.tiffinservice.TiffinService.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tiffinservice.TiffinService.Entities.User;
+import com.tiffinservice.TiffinService.Repositry.UserRepositry;
+import com.tiffinservice.TiffinService.Service.UserService;
+
+@RestController("/")
+public class HomeController {
+	
+	 @Autowired
+	  private UserService userService;
+	@GetMapping("/")
+	private String addUser() {
+		
+		return "user is being added succefully";
+		
+	}
+	public HomeController() {
+		super();
+		System.out.println("super constructore");
+		// TODO Auto-generated constructor stub
+	}
+	
+}

@@ -1,0 +1,16 @@
+package com.tiffinservice.TiffinService.Entities;
+
+
+
+import org.hibernate.annotations.Table;
+
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Entity
+@Table(name="User")
+@Data
+public class User {
+	
+	
+}

@@ -1,0 +1,10 @@
+package com.example.practice.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="tiffin_menu")
+public class Tiffin {
+
+}

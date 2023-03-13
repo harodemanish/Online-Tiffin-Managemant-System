@@ -1,0 +1,20 @@
+package com.example.practice.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.practice.model.Order;
+import com.example.practice.repositories.OrderRepositry;
+
+@Service
+public class OrderService {
+	
+	@Autowired
+	private OrderRepositry orderRepositry;
+	public List<Order> getAllOrders() {
+		return orderRepositry.findAll();
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.example.practice.repositories;
+
+public interface MenuRepositry {
+
+}

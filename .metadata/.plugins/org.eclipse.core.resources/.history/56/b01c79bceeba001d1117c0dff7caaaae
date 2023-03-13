@@ -1,0 +1,9 @@
+package com.example.practice.repositry;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.practice.model.Order;
+
+public interface OrderRepositry  extends JpaRepository<Order, Integer> {
+
+}

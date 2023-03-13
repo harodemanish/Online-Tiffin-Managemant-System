@@ -1,0 +1,12 @@
+package com.example.practice.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.practice.model.TiffinMenu;
+
+public interface MenuRepositry extends JpaRepository<TiffinMenu, Integer>{
+	
+	List<TiffinMenu> findByisSweet(boolean isSweet);
+}

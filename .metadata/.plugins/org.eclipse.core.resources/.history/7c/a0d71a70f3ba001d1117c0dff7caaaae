@@ -1,0 +1,7 @@
+package com.example.practice.repositry;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TiffinMenuRepositry  extends JpaRepository<TiffinMenuRepositry, Integer> {
+
+}

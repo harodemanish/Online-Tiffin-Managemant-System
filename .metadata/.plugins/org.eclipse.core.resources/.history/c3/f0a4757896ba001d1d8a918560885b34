@@ -1,0 +1,30 @@
+package com.tiffinservice.TiffinService;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.tiffinservice.TiffinService.Entities.User;
+import com.tiffinservice.TiffinService.Repositry.UserRepositry;
+
+@SpringBootApplication
+public class TiffinServiceApplication {
+	
+//	@Autowired
+//	private UserRepositry userrepo;
+	public static void main(String[] args) {
+		
+		org.springframework.context.ApplicationContext context =  SpringApplication.run(TiffinServiceApplication.class, args);
+		UserRepositry userRepositry =  context.getBean(UserRepositry.class);
+		
+		User user= new User();
+		user.setUserFirstName("Yash");
+		user.setUserLastName("Sarda");
+		user.setUserAddress("Pune");
+		
+		User k = userrepo.save(user);
+		System.out.println(k);
+		
+		
+	}
+
+}

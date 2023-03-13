@@ -1,0 +1,19 @@
+package com.example.practice.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.practice.model.User;
+import com.example.practice.repositry.UserRepositry;
+
+@Service
+public class UserService {
+	
+	private static UserRepositry userRepositry;
+	public void getAllUsers() {
+		 
+	}
+	
+	public User addUser(User user) {
+		return userRepositry.save(user);
+	}
+}

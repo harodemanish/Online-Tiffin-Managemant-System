@@ -1,0 +1,14 @@
+package com.example.practice.repositry;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.practice.model.Order;
+
+public interface OrderRepositry  extends JpaRepository<Order, Integer> {
+	
+	List<Order> findByProviderId(String providerId);
+	
+	List<Order> findByUserId(String userFirstName);
+}

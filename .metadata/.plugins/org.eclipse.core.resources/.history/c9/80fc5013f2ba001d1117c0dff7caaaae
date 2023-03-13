@@ -1,0 +1,30 @@
+package com.example.practice.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.practice.model.User;
+import com.example.practice.repositry.UserRepositry;
+
+@Service
+public class UserService {
+	
+	
+	@Autowired
+	private UserRepositry userRepositry;
+	
+	public UserService(UserRepositry userRepositry) {
+		super();
+		this.userRepositry = userRepositry;
+	}
+	public void getAllUsers() {
+		 
+	}
+	
+	public User addUser(User user,UserRepositry userRepositry) {
+		return userRepositry.save(user);
+	}
+	public User addUser(User user) {
+		return userRepositry.save(user);
+	}
+}

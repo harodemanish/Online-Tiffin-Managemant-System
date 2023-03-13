@@ -1,0 +1,44 @@
+package com.example.practice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+
+import com.example.practice.repositories.UserRepositry;
+import com.example.practice.service.UserService;
+
+@SpringBootApplication
+@ComponentScan
+public class PracticeApplication {
+
+	public static void main(String[] args) {
+
+		 ApplicationContext context =  SpringApplication.run(PracticeApplication.class, args);
+
+		System.out.println(context.getBeanDefinitionCount());
+
+//		UserService usd = context.getBean(UserService.class);
+//		UserRepositry usr = context.getBean(UserRepositry.class);
+//		
+//		String[] lk = context.getBeanNamesForType(UserService.class);
+//		String[] lkr = context.getBeanNamesForType(UserRepositry.class);
+//		for(String l:lk)
+//			System.out.println("Bean name--"+l);
+//		for(String l:lkr)
+//			System.out.println("Bean name--"+l);
+//		
+//		System.out.println("usd is "+usd);
+//		
+//		System.out.println("Inside home");
+////		User u = new User();
+////		u.setUserFirstName("Yash");
+////		u.setUserLastName("sarda");
+////		u.setPhoneNumber("8308780621");
+////		u.setEmail("sardayash8308@gmail.com");
+////		System.out.println("ITs user service"+usd);
+////		usd.addUser(u,usr);
+//		
+	}
+
+}
